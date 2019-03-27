@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <progress value='20' max='100'></progress>
+    <div id='q'>
+        <button @click='qq'>测试</button>
+    </div>
+    <script>
+    var vm=new Vue({
+        el:'#q',
+        data: {
+            fortest:'222'
+        },
+        methods: {
+            qq () {
+                this.fortest='3333';
+                console.log(this)
+            }
+        },
+        watch: {
+            fortest:function (x) {
+                console.log(x)
+            }
+        },
+    })
+    </script>
+</body>
+</html>
